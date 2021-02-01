@@ -1,0 +1,13 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "author": "wjq990112",
+  "license": "MIT",
+  "repository": "https://github.com/wjq990112/Learning-Webpack",
+  "scripts": {
+    "bootstrap": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
