@@ -1,8 +1,11 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  // 生产模式
-  mode: 'production',
+  // 开发者工具 不需要开发调试
+  devtool: false,
+  // 开发模式 不进行代码压缩
+  mode: 'development',
   // 入口文件
   entry: './index.js',
   output: {
@@ -16,8 +19,17 @@ module.exports = {
       {
         // 正则匹配后缀名为 .css 的文件
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
+  },
+  plugins: [new MiniCssExtractPlugin()],
+  devServer: {
+    // DevServer 根目录
+    contentBase: './',
+    // DevServer 端口
+    port: 8080,
+    // 打开浏览器
+    open: true,
   },
 };
