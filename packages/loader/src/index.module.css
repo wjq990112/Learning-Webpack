@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: lightskyblue;
+  width: 32px;
+  padding: 2px 4px;
+  margin: 2px 4px;
+  border-radius: 2px;
+}
